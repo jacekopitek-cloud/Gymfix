@@ -62,7 +62,7 @@ export interface Client {
   machines: ClientMachine[];
 }
 
-export type ViewState = 'DASHBOARD' | 'INVENTORY' | 'JOBS' | 'JOB_DETAIL' | 'USERS' | 'SETTINGS' | 'CLIENTS' | 'CLIENT_DETAIL';
+export type ViewState = 'LOGIN' | 'DASHBOARD' | 'INVENTORY' | 'JOBS' | 'JOB_DETAIL' | 'USERS' | 'SETTINGS' | 'CLIENTS' | 'CLIENT_DETAIL';
 
 export enum UserRole {
   ADMIN = 'Administrator',
