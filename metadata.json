@@ -1,0 +1,7 @@
+{
+  "name": "GymFix WMS",
+  "description": "System zarządzania serwisem sprzętu fitness (WMS + Service Management). Obsługa magazynu części i zleceń serwisowych z asystentem AI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
