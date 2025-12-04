@@ -19,7 +19,14 @@ import {
   Lock,
   Shield,
   Settings,
-  Building
+  Building,
+  Sun,
+  Moon,
+  Pencil,
+  ScanBarcode,
+  Layers,
+  Hammer,
+  Recycle
 } from 'lucide-react';
 
 export const Icons = {
@@ -41,5 +48,12 @@ export const Icons = {
   Lock,
   Shield,
   Settings,
-  Building
+  Building,
+  Sun,
+  Moon,
+  Edit: Pencil,
+  Scan: ScanBarcode,
+  Layers,
+  Build: Hammer,
+  Dismantle: Recycle
 };

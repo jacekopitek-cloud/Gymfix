@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { DataProvider } from './contexts/DataContext';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { NavigationProvider, useNavigation } from './contexts/NavigationContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -49,13 +50,15 @@ const MainController = () => {
 
 const App = () => {
   return (
-    <DataProvider>
-      <NavigationProvider>
-        <AuthProvider>
-          <MainController />
-        </AuthProvider>
-      </NavigationProvider>
-    </DataProvider>
+    <ThemeProvider>
+      <DataProvider>
+        <NavigationProvider>
+          <AuthProvider>
+            <MainController />
+          </AuthProvider>
+        </NavigationProvider>
+      </DataProvider>
+    </ThemeProvider>
   );
 };
 

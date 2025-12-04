@@ -6,6 +6,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>GymFix WMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
     <style>
       /* Custom tweaks */
       body {
@@ -36,7 +41,7 @@
 }
 </script>
 </head>
-  <body>
+  <body class="bg-slate-50 dark:bg-black transition-colors duration-300">
     <div id="root"></div>
   </body>
 </html>

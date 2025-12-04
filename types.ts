@@ -5,7 +5,18 @@ export enum PartCategory {
   UPHOLSTERY = 'Tapicerka',
   MECHANICAL = 'Mechaniczne',
   CONSUMABLES = 'Eksploatacyjne',
-  WEARABLE = 'Części zużywalne'
+  WEARABLE = 'Części zużywalne',
+  ASSEMBLY = 'Złożenie (Zestaw)'
+}
+
+export enum PartType {
+  SINGLE = 'Pojedyncza',
+  ASSEMBLY = 'Złożony (BOM)'
+}
+
+export interface BOMItem {
+  partId: string;
+  quantity: number;
 }
 
 export interface Part {
@@ -13,10 +24,12 @@ export interface Part {
   name: string;
   sku: string;
   category: PartCategory;
+  type: PartType;
   quantity: number;
   minLevel: number;
   price: number;
   location: string;
+  bom?: BOMItem[]; // Only for PartType.ASSEMBLY
 }
 
 export enum JobStatus {
@@ -84,6 +97,8 @@ export interface User {
   id: string;
   name: string;
   email: string;
+  phone?: string;
+  position?: string;
   role: UserRole;
   permissions: Permission[];
   password?: string; // In real app, hash this
